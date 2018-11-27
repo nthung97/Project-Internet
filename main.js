@@ -16,11 +16,11 @@ function sendBtn_click(){
                                  + currentdate.getHours() + ":" + currentdate.getMinutes() + " " + period + " |  " 
                                  + monthNames[currentdate.getMonth()] + " " + currentdate.getDay() 
                                  + '</span>'
+    document.getElementById("write_msg").value = "";
 }
 
 function runScript(e) {
   if (e.keyCode == 13) {
-    document.getElementById("write_msg").value = "";
     sendBtn_click()
   }
 }
