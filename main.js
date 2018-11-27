@@ -17,3 +17,10 @@ function sendBtn_click(){
                                  + monthNames[currentdate.getMonth()] + " " + currentdate.getDay() 
                                  + '</span>'
 }
+
+function runScript(e) {
+  if (e.keyCode == 13) {
+    document.getElementById("write_msg").value = "";
+    sendBtn_click()
+  }
+}
