@@ -1,4 +1,8 @@
-img{ max-width:100%;}
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+img{
+  max-width:100%;
+  border-radius:70%;
+}
 .container{max-width:1170px; margin:auto;}
 .inbox_people {
   background: #f8f8f8 none repeat scroll 0 0;
@@ -132,14 +136,28 @@ img{ max-width:100%;}
   color: #fff;
   cursor: pointer;
   font-size: 17px;
-  height: 33px;
+  height: 35px;
   position: absolute;
-  right: 0;
+  right: 5;
   top: 11px;
-  width: 33px;
+  width: 35px;
 }
 .messaging { padding: 0 0 50px 0;}
 .msg_history {
   height: 516px;
   overflow-y: auto;
+}
+
+button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  width: 20%;
+  border: 0;
+  padding: 15px;
+  color: #fff;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
 }

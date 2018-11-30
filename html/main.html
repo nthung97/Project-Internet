@@ -10,89 +10,117 @@
     </head>
 
     <body>
-    <div class="container">
-    <h1 class=" text_center">Socket project</h1>
-    
-    <div class="messaging">
-        <div class="inbox_msg">
-            <div class="inbox_people">
-            <div class="headind_srch">
-                <div class="recent_heading">
-                <h4>Recent</h4>
-                </div>
-                <div class="srch_bar">
-                    <div class="stylish-input-group">
-                        <input type="text" class="search-bar"  placeholder="Search" >
-                    </div>
-                </div>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+            <a class="navbar-brand">Socket project</a>
+            </div>
+            <ul class="nav nav-tabs">
+            <li class="active"><a href="#profile">User profile</a></li>
+            <li><a href="#container">Chat screen</a></li>
+            <li><a href="#container">News feed</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="tab-content">
+        <div  class="container tab-pane fade in active" id = "profile">
+            <div class = "col-sm-2 ">
+                <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil">
             </div>
 
-            <div class="inbox_chat">
-                <div class="chat_list active_chat">
-                    <div class="chat_people">
-                        <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
-                        <div class="chat_ib">
-                            <h5>Nguyen Thai Hung <span class="chat_date">Dec 25</span></h5>
-                            <p>Test, which is a new approach to have all solutions 
-                                astrology under one roof.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="chat_list">
-                    <div class="chat_people">
-                        <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
-                        <div class="chat_ib">
-                            <h5>To Minh Thanh <span class="chat_date">Dec 25</span></h5>
-                            <p>Test, which is a new approach to have all solutions 
-                                astrology under one roof.</p>
-                        </div>
-                    </div>
-                </div>
+            <div  class="col-sm-6">
+                <h2>Hung nguyen</h2>
+                <h3>Date of birth: 04/10/1997</h3>
+                <input type="file" onchange="changepic_click()">
             </div>
-        </div>
         
-      
-          
-        <div class="mesgs">
-            <ul class="nav nav-tabs">
-                <li class="active"><a href="#home">Home</a></li>
-                <li><a href="#blog">Blog</a></li>
-            </ul>
-            <br/>
-            <div class="tab-content">
-                <div id="home" class="tab-pane fade in active">
-                        <div class="msg_history">
-                            <div class="incoming_msg">
-                            <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
-                            <div class="received_msg">
-                                <div class="received_withd_msg">
-                                <p>Test which is a new approach to have all
-                                    solutions</p>
-                                <span class="time_date"> 11:01 AM    |    June 9</span>
+        </div>
+
+    
+        <div class="container tab-pane fade" id ="container">     
+            <div class="messaging">
+                <div class="inbox_msg">
+                    
+                    <div class="inbox_people">
+                    <div class="headind_srch">
+                        <div class="recent_heading">
+                        <h4>Recent</h4>
+                        </div>
+                        <div class="srch_bar">
+                            <div class="stylish-input-group">
+                                <input type="text" class="search-bar"  placeholder="Search" >
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="inbox_chat">
+                        <div class="chat_list active_chat">
+                            <div class="chat_people">
+                                <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                                <div class="chat_ib">
+                                    <h5>Nguyen Thai Hung <span class="chat_date">Dec 25</span></h5>
+                                    <p>Test, which is a new approach to have all solutions 
+                                        astrology under one roof.</p>
                                 </div>
                             </div>
-                            </div>
-                            <div class="outgoing_msg">
-                            <div class="sent_msg" id = "sent_msg">
-                                <p>Test which is a new approach to have all
-                                solutions</p>
-                                <span class="time_date"> 11:01 AM    |    June 9</span>
-                            </div>
-                            </div>
                         </div>
-    
-                        <div class="type_msg">
-                            <div class="input_msg_write">
-                            <input type="text" class="write_msg" id = "write_msg" placeholder="Type a message" onkeypress="return runScript(event)" />
-                            <button class="msg_send_btn" type="button" onclick = "sendBtn_click()"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
+                        
+                        <div class="chat_list">
+                            <div class="chat_people">
+                                <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                                <div class="chat_ib">
+                                    <h5>To Minh Thanh <span class="chat_date">Dec 25</span></h5>
+                                    <p>Test, which is a new approach to have all solutions 
+                                        astrology under one roof.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                <div id="blog" class="tab-pane fade" >
-                    This is a blog, holding some status
-                </div>
-               
+                    </div>
+                    
+                    <div class="mesgs">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#home">Home</a></li>
+                            <li><a href="#blog">Blog</a></li>
+                        </ul>
+                        <br/>
+                        <div class="tab-content">
+                            <div id="home" class="tab-pane fade in active">
+                                    <div class="msg_history">
+                                        <div class="incoming_msg">
+                                        <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                                        <div class="received_msg">
+                                            <div class="received_withd_msg">
+                                            <p>Test which is a new approach to have all
+                                                solutions</p>
+                                            <span class="time_date"> 11:01 AM    |    June 9</span>
+                                            </div>
+                                        </div>
+                                        </div>
+                                        <div class="outgoing_msg">
+                                        <div class="sent_msg" id = "sent_msg">
+                                            <p>Test which is a new approach to have all
+                                            solutions</p>
+                                            <span class="time_date"> 11:01 AM    |    June 9</span>
+                                        </div>
+                                        </div>
+                                    </div>
+                
+                                    <div class="type_msg">
+                                        <div class="input_msg_write">
+                                        <input type="text" class="write_msg" id = "write_msg" placeholder="Type a message" onkeypress="return runScript(event)" />
+                                        <button class="msg_send_btn" type="button" onclick = "sendBtn_click()"><i class="fa fa-paper-plane-o"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            <div id="blog" class="tab-pane fade" >
+                                This is a blog, holding some status
+                            </div>
+                        
+                        </div>
+                    </div>
+            </div>
             </div>
         </div>
 
